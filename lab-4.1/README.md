@@ -56,3 +56,57 @@ The password is `simplilearn`.
 
 You will be connected to the graphical desktop of the virtual machine.
 
+### Step 5
+
+Start and use Eclipse.
+
+In your VNC window start the _File System_ from the desktop icon.  
+Select _Student_ in the left column.  
+Open the _eclipse_ folder.  
+Open the java-neon_ folder.  
+Open the _eclipse_ folder.  
+Start eclipse from the diamond shaped icon.  
+Accept the default workspace location.
+
+Select File->New->Java Project.  
+Uncheck _Use default location_.  
+Hit the _Browse_ button.
+Select _Home_.  
+Open the devops-lesson-4 folder.  
+Open the lab-4.1 folder.  
+Select the FizzBuzz folder and hot _OK_ at the bottom of the dialog.  
+Hit the _Finish_ button at the bottom of the dialog.  
+
+You should see the FizzBuzz project on the left. The test folder is marked in red as there is a mising dependency.
+
+Select the FizzBuzz project and right click. A mnu will appear. Select _Properties_ at the bottom.
+
+Select _Java Build Path_.  
+Select the _Libraries_ tab.  
+Hit the _Add Library_ button.  
+Select _JUnit_ then hit _Next_.  
+Make sure that _JUnit 4_ is selected and then hit _Finish_.
+Hi _OK_ the project errors should disappear.
+
+Open up the soure and test folders and the devops packages.
+Double click on FizzBuzz.java and FizzBuzzTest.java. Editor windows will open.
+
+### Step 6
+
+Select FizzBuzzTests.java and right click.  
+
+Select _Run as_ then _JUnit Test_.
+
+The unit tests should run successfully.
+
+Implement the numberThreeReturnsFizz() test and run it. It should fail.
+
+Implement the code and run it making changes until the tests pass.
+
+If you have time implement more tests.
+
+### Step 7
+
+Exit eclipse by slecting _File_->_Exit_.
+
+Close the VNC viewer.
