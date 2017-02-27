@@ -84,7 +84,7 @@ Hit _Yes_ to restart eclipse. Eclipse will stop and automatically restart.
 ### Step 7
 
 Click on the FizzBuzz project and right click.  
-Select FindBugs -> Check Code.
+Select FindBugs -> Find Bugs.
 
 What warnings or errors do you get?  
 Do you agree with them?
