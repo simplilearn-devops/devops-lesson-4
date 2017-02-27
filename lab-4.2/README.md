@@ -66,15 +66,15 @@ The tests will run and a coverage report will appear at the bottom of Eclipse. T
 
 ### Step 6
 
-Install PMD.
+Install FindBugs.
 
 From your Eclipse menu select Help → Install New Software...
 
-In the Install dialog enter `http://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/` at the Work with field. Hit the _Add_ button.
+In the Install dialog enter `http://findbugs.cs.umd.edu/eclipse/` at the Work with field. Hit the _Add_ button.
 
-Enter the name `PMD` and hit _OK_.
+Enter the name `FindBugs` and hit _OK_.
 
-Check the latest PMD version and press Next. It may take a few minutes.  
+Check the latest FindBugs version and press Next. It may take a few minutes.  
 On the InstallDetails screen select Next.  
 Accept the license and hit Finish. It may take a few minutes.  
 Hit _Yes_ to any warning dialogs about unsigned content.
@@ -84,11 +84,11 @@ Hit _Yes_ to restart eclipse. Eclipse will stop and automatically restart.
 ### Step 7
 
 Click on the FizzBuzz project and right click.  
-Select PMD -> Check Code.
+Select FindBugs -> Check Code.
 
 What warnings or errors do you get?  
 Do you agree with them?
-Fix a couple of issues and rerun PMD.
+Fix a couple of issues and rerun FindBugs.
 
 ### Step 8
 
