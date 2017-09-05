@@ -1,24 +1,34 @@
-# DevOps lab 4.2 Code Quality
+# DevOps lab 7.1 Mocking
 
-Use code quality tools.
+Setup a Mocking framework environment.
 
 ### Step 1
 
-Open the Cloud Platform Console at https://console.cloud.google.com. Go to Compute Engine and VM Instances. Start the VM if it isn’t running and connect using SSH.
+Go to Compute Engine and VM Instances. Start the VM if it isn’t running and connect using SSH.
 
 ### Step 2
 
+Check out the code for the lesson.
+
+`cd`  
+`cd devops-lesson-4/lab-4.2`  
+
+### Step 3
+
 Start the vncserver.
 
-`vncserver`
+`vncserver`  
 
-Start the VNC client. You will need the external IP address of your virtual machine. Enter the following into the VNC client replacing x.x.x.x with your IP address.
 
-`x.x.x.x:5901`
+### Step 4
+
+Start the VNC client on your local machine. You will need the external IP address of your virtual machine. Enter the following into the VNC client replacing x.x.x.x with your IP address. Note that the external IP address can change every time you start the virtual machine.
+
+`x.x.x.x:5901`  
 
 If you are using a Mac enter the following into Safari replacing x.x.x.x with your IP address.
 
-`vnc://x.x.x.x:5901`
+`vnc://x.x.x.x:5901`  
 
 Dismiss any warnings about insecure connections.
 
@@ -26,74 +36,61 @@ The password is `simplilearn`.
 
 You will be connected to the graphical desktop of the virtual machine.
 
-### Step 3
+### Step 5
 
 Start and use Eclipse.
 
-In your VNC window start the File System from the desktop icon.  
-Select Student in the left column.  
-Open the eclipse folder.  
+In your VNC window start the _File System_ from the desktop icon.  
+Select _Student_ in the left column.  
+Open the _eclipse_ folder.  
 Open the java-neon_ folder.  
-Open the eclipse folder.  
+Open the _eclipse_ folder.  
 Start eclipse from the diamond shaped icon.  
-Accept the default workspace location is asked.  
+Accept the default workspace location.
 
-### Step 4
+Select File->New->Java Project.  
+Uncheck _Use default location_.  
+Hit the _Browse_ button.
+Select _Home_.  
+Open the devops-lesson-4 folder.  
+Open the lab-4.2 folder.  
+Select the Mocking folder and hit _OK_ at the bottom of the dialog.  
+Hit the _Finish_ button at the bottom of the dialog.  
 
-Install JaCoCo also known as EclEmma.
+You should see the Mocking project on the left. The test folder is marked in red as there is a missing dependency.
 
-From your Eclipse menu select Help → Install New Software...
+Select the Mocking project and right click. A menu will appear. Select _Properties_ at the bottom.
 
-In the Install dialog enter `http://update.eclemma.org/` at the Work with field. Hit the _Add_ button.
+Select _Java Build Path_.  
+Select the _Libraries_ tab.  
+Hit the _Add Library_ button.  
+Select _JUnit_ then hit _Next_.  
+Make sure that _JUnit 4_ is selected and then hit _Finish_.
 
-Enter the name `EclEmma` and hit _OK_.
+Select _Add Jars_.  
+Open the _Mocking_ folder and then open the _lib_ folder.  
+You shpuld see 4 jar files. Select them all and hit _OK_. If the lib folder isn’t visible
+it means that Eclipse has automatically loaded the jar files and nothing needs to be done.
 
-Check the latest EclEmma version and press Next. It may take a few minutes.  
-On the InstallDetails screen select Next.  
-Accept the license and hit Finish. It may take a few minutes.
+Hit _OK_ the project errors should disappear.
 
-Hit _Yes_ to restart eclipse. Eclipse will stop and automatically restart.
-
-### Step 5
-
-Open the FizzBuzz.java and FizzBuzzTests.java in the editor window by double clicking on each of them.
-
-Open up the FizzBuzz project and select FizzBuzzTests.java.
-
-Right click and select Coverage as -> Unit Test
-
-The tests will run and a coverage report will appear at the bottom of Eclipse. The code will also be coloured green, yellow or red. If coverage is not 100% can you improve it?
+Open up the source and test folders and the devops packages.
+Double click on LoginController.java and LoginControlerTests.java. Editor windows will open.
 
 ### Step 6
 
-Install FindBugs.
+Select LoginControllerTests.java and right click.  
 
-From your Eclipse menu select Help → Install New Software...
+Select _Run as_ then _JUnit Test_.
 
-In the Install dialog enter `http://findbugs.cs.umd.edu/eclipse/` at the Work with field. Hit the _Add_ button.
+The unit tests should fail.
 
-Enter the name `FindBugs` and hit _OK_.
+Implement the code and run it making changes until the tests pass.
 
-Check the latest FindBugs version and press Next. It may take a few minutes.  
-On the InstallDetails screen select Next.  
-Accept the license and hit Finish. It may take a few minutes.  
-Hit _Yes_ to any warning dialogs about unsigned content.
-
-Hit _Yes_ to restart eclipse. Eclipse will stop and automatically restart.
+If you have time implement more tests.
 
 ### Step 7
 
-Click on the FizzBuzz project and right click.  
-Select FindBugs -> Find Bugs.
-
-What warnings or errors do you get?  
-Do you agree with them?
-Fix a couple of issues and rerun FindBugs.
-
-### Step 8
-
-Exit eclipse by selecting File->Exit.
+Exit eclipse by selecting _File_->_Exit_.
 
 Close the VNC viewer.
-
-Exit the SSH session and stop the virtual machine.
