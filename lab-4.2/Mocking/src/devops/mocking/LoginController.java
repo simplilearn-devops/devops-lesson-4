@@ -6,7 +6,7 @@ public class LoginController {
 	}
 	
 	public String getToken() {
-		return null ;
+		return "abcd1234" ;
 	}
 
 	public void authenticate( String user, String password ) {
